@@ -1,16 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node
-{
+class Node{
 public:
     int value;
     Node *next;
 };
 
-int main()
-{
-
+int main(){
     Node *head;
     Node *one;
     Node *two;
@@ -29,8 +26,7 @@ int main()
     two->next = three;
     three->next = NULL;
 
-    while (head != NULL)
-    {
+    while (head != NULL){
         cout << head->value << " ";
         head = head->next;
     }

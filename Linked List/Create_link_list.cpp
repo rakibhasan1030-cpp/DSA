@@ -1,27 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node{
+class Node
+{
 public:
     int value;
     Node *next;
 };
 
-Node *deleteNode(Node *head, Node *node){
-    if(head == node){
+Node *deleteNode(Node *head, Node *node)
+{
+    if (head == node)
+    {
         head = node->next;
         free(node);
         return head;
     }
 
     Node *curr_node = head;
-    while (curr_node != NULL){
-        if(curr_node->next == node){
+    while (curr_node != NULL)
+    {
+        if (curr_node->next == node)
+        {
             break;
         }
-        curr_node = node->next;
+        curr_node = curr_node->next;
     }
-    if(curr_node == NULL){
+    if (curr_node == NULL)
+    {
         return head;
     }
 
@@ -31,7 +37,8 @@ Node *deleteNode(Node *head, Node *node){
     return head;
 }
 
-int main(){
+int main()
+{
     Node *head;
     Node *one;
     Node *two;
@@ -41,7 +48,7 @@ int main(){
     Node *six;
 
     one = new Node();
-    two = new Node();       
+    two = new Node();
     three = new Node();
     four = new Node();
     five = new Node();
@@ -62,9 +69,8 @@ int main(){
     five->next = six;
     six->next = NULL;
 
-    head = deleteNode(head, two);
-
-    while (head != NULL){
+    while (head != NULL)
+    {
         cout << head->value << " ";
         head = head->next;
     }

@@ -7,6 +7,10 @@ public:
     Node *next;
 };
 
+void push(Node *node){
+
+}
+
 int main(){
     Node *head;
     Node *one;

@@ -67,12 +67,12 @@ int main()
     push(&head, 8);
     push(&head, 9);
     push(&head, 10);
+
+    insertAfter(head->next, 15);
      
-    while (head != NULL)
-    {
+    while (head != NULL){
         cout << head->data << " ";
         head = head->next;
     }
-
     return 0;
 }

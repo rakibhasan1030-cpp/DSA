@@ -4,21 +4,24 @@ using namespace std;
 class Node
 {
 public:
-    int value;
+    int data;
     Node *next;
 };
 
-Node *createNode(int data, Node *next)
+
+void push(Node** head_ref, int new_data)
 {
-    Node *tmp = new Node();
-    if (tmp == NULL)
-    {
-        cout << "Can not create a node!";
-        exit(1);
-    }
-    tmp->value = data;
-    tmp->next = next;
-    return tmp;
+    /* 1. allocate node */
+    Node* new_node = new Node();
+ 
+    /* 2. put in the data */
+    new_node->data = new_data;
+ 
+    /* 3. Make next of new node as head */
+    new_node->next = (*head_ref);
+ 
+    /* 4. move the head to point to the new node */
+    (*head_ref) = new_node;
 }
 
 Node *deleteNode(Node *head, Node *node)
@@ -52,41 +55,16 @@ Node *deleteNode(Node *head, Node *node)
 
 int main()
 {
-    Node *head, *one, *two, *three, *four, *five, *six;
-
-    head = one;
-    one = createNode(1, two);
-    two = createNode(2, three);
-    three = createNode(3, four);
-    four = createNode(4, five);
-    five = createNode(5, six);
-    six = createNode(6, NULL);
-
-    // one = new Node();
-    // two = new Node();
-    // three = new Node();
-    // four = new Node();
-    // five = new Node();
-    // six = new Node();
-
-    // one->value = 1;
-    // two->value = 2;
-    // three->value = 3;
-    // four->value = 4;
-    // five->value = 5;
-    // six->value = 6;
-
-    // head = one;
-    // one->next = two;
-    // two->next = three;
-    // three->next = four;
-    // four->next = five;
-    // five->next = six;
-    // six->next = NULL;
-
+    /* Start with the empty list */
+    Node* head = NULL;
+     
+    // Insert 7 at the beginning.
+    // So linked list becomes 7->6->NULL
+    push(&head, 7);
+     
     while (head != NULL)
     {
-        cout << head->value << " ";
+        cout << head->data << " ";
         head = head->next;
     }
     return 0;

@@ -8,21 +8,24 @@ public:
     Node *next;
 };
 
-
-void push(Node** head_ref, int new_data)
-{
-    /* 1. allocate node */
-    Node* new_node = new Node();
- 
-    /* 2. put in the data */
-    new_node->data = new_data;
- 
-    /* 3. Make next of new node as head */
-    new_node->next = (*head_ref);
- 
-    /* 4. move the head to point to the new node */
-    (*head_ref) = new_node;
+void push(Node **head, int data){
+    Node *newNode = new Node();
+    newNode->data = data;
+    newNode->next = *head;
+    *head = newNode;
 }
+
+void insertAfter(Node *prevNode, int data){
+    if(prevNode == NULL){
+        cout<< "Previous Node can't be NULL!"
+        exit(1);
+    }
+    Node *newNode = new Node();
+    newNode->data = data;
+    newNode->next = prevNode->next;
+    prevNode->next = newNode;
+}
+
 
 Node *deleteNode(Node *head, Node *node)
 {

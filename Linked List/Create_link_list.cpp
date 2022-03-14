@@ -17,7 +17,7 @@ void push(Node **head, int data){
 
 void insertAfter(Node *prevNode, int data){
     if(prevNode == NULL){
-        cout<< "Previous Node can't be NULL!"
+        cout<< "Previous Node can't be NULL!";
         exit(1);
     }
     Node *newNode = new Node();

@@ -61,11 +61,15 @@ int main()
     // Insert 7 at the beginning.
     // So linked list becomes 7->6->NULL
     push(&head, 7);
+    push(&head, 8);
+    push(&head, 9);
+    push(&head, 10);
      
     while (head != NULL)
     {
         cout << head->data << " ";
         head = head->next;
     }
+
     return 0;
 }

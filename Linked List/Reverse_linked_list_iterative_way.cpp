@@ -12,3 +12,11 @@ class node{
     }
 };
 
+void insertAtTail(node **head, int val){
+    node n = new node(val);
+
+}
+
+int main(){
+    
+}

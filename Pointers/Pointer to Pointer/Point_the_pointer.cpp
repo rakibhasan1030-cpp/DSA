@@ -3,6 +3,7 @@ using namespace std;
 int main()
 {
     int a = 100;
+    cout << "Value fo 'a' : "  << a << endl;     
     int *p = &a;
     cout << "Address of 'a' : " << p << endl;
 

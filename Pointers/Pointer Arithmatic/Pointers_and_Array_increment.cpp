@@ -33,6 +33,8 @@ void exampleTwo(){
 
 int main()
 {
+    exampleOne();
+    cout << endl;
     exampleTwo();
     return 0;
 }

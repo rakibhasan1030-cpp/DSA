@@ -55,7 +55,7 @@ bool search(node *head, int key)
 void deletion(node *&head, int val)
 {
     node *temp = head;
-    if (temp == NULL)
+    if (temp == NULL) /* if the list is empty */
     {
         return;
     }

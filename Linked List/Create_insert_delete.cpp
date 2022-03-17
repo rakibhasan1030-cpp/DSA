@@ -59,7 +59,8 @@ void deletion(node *&head, int val)
     {
         return;
     }
-    if(temp->next == NULL){  /* if the list contain only one data */
+    if (temp->next == NULL)
+    { /* if the list contain only one data */
         head = head->next;
         delete temp;
         return;
@@ -73,10 +74,44 @@ void deletion(node *&head, int val)
     delete toDelete;
 }
 
-void deleteHead(node *&head){
-    node* toDelete = head;
+void deleteHead(node *&head)
+{
+    node *toDelete = head;
     head = head->next;
     delete toDelete;
+}
+
+node *reverseListIterative(node *&head) /* iterative way to reverse */
+{
+    node *prev, *curr, *next;
+    prev = NULL;
+    curr = head;
+
+    if (head == NULL || head->next == NULL)
+    {
+        return head;
+    }
+    while (curr != NULL)
+    {
+        next = curr->next;
+        curr->next = prev;
+
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+
+node *reverseListRecursive(node *&head) { /* recursive way to reverse */
+
+    if(head == NULL || head->next == NULL){
+        return head;
+    }
+    node* newHead = reverseListRecursive(head->next);
+    head->next->next = head;
+    head->next = NULL;
+    
+    return newHead;
 }
 
 void display(node *head)
@@ -154,6 +189,12 @@ int main()
 
     display(head);
 
+    cout << endl;
+    cout << endl;
+
+    node* newhead = reverseListRecursive(head);
+    cout << "Reversed List : ";
+    display(newhead);
     cout << endl;
     cout << endl;
 }

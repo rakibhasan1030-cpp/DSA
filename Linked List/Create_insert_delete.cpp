@@ -59,6 +59,11 @@ void deletion(node *&head, int val)
     {
         return;
     }
+    if(temp->next == NULL){  /* if the list contain only one data */
+        head = head->next;
+        delete temp;
+        return;
+    }
     while (temp->next->data != val)
     {
         temp = temp->next;

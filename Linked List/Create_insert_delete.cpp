@@ -52,6 +52,22 @@ bool search(node *head, int key)
     return false;
 }
 
+void deletion(node *&head, int val)
+{
+    node *temp = head;
+    if (temp == NULL)
+    {
+        return;
+    }
+    while (temp->next->data != val)
+    {
+        temp = temp->next;
+    }
+    node *toDelete = temp->next;
+    temp->next = temp->next->next;
+    delete toDelete;
+}
+
 void display(node *head)
 {
     node *temp = head;
@@ -107,6 +123,16 @@ int main()
     {
         cout << "Not Found in the List!";
     }
+    cout << endl;
+    cout << endl;
+
+    cout << "Delete 5 : ";
+    deletion(head, 5);
+    cout << endl;
+    cout << endl;
+
+    display(head);
+
     cout << endl;
     cout << endl;
 }

@@ -31,17 +31,22 @@ void insertAtTail(node *&head, int val)
     temp->next = n;
 }
 
-void insertAtBegining(node* &head, int val){
+void insertAtBegining(node *&head, int val)
+{
     node *n = new node(val);
-
-    if(head == NULL){
-        head = n;
-        return;
-    }
-
-    node* temp = head;
+    n->next = head;
     head = n;
-    n->next = temp;
+}
+
+bool search(node* head, int key){
+    node* temp = head;
+    while(temp != NULL){
+        if(temp->data == key){
+            return true;
+        }
+        temp = temp->next;
+    }
+    return false;
 }
 
 void display(node *head)
@@ -64,13 +69,23 @@ int main()
     insertAtTail(head, 4);
     insertAtTail(head, 5);
 
-    cout<< endl;
-    cout<< endl;
+    cout << endl;
+    cout << endl;
     display(head);
 
     insertAtBegining(head, 0);
 
-    cout<< endl;
-    cout<< endl;
+    cout << endl;
+    cout << endl;
     display(head);
+
+
+    cout << endl;
+    cout << endl;
+    if(search(head, 3)){
+        cout<< "3 Found!";
+    }else{
+        cout<< "3 Not Found!";
+    }
+
 }

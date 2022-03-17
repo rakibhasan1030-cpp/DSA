@@ -38,10 +38,13 @@ void insertAtBegining(node *&head, int val)
     head = n;
 }
 
-bool search(node* head, int key){
-    node* temp = head;
-    while(temp != NULL){
-        if(temp->data == key){
+bool search(node *head, int key)
+{
+    node *temp = head;
+    while (temp != NULL)
+    {
+        if (temp->data == key)
+        {
             return true;
         }
         temp = temp->next;
@@ -71,21 +74,39 @@ int main()
 
     cout << endl;
     cout << endl;
+    cout << "Insert at tail : ";
     display(head);
 
     insertAtBegining(head, 0);
 
     cout << endl;
     cout << endl;
+    cout << "Insert 0 at begining : ";
     display(head);
 
-
     cout << endl;
     cout << endl;
-    if(search(head, 3)){
-        cout<< "3 Found!";
-    }else{
-        cout<< "3 Not Found!";
+    cout << "Searching for 3 : ";
+    if (search(head, 3))
+    {
+        cout << "Found in the List!";
+    }
+    else
+    {
+        cout << "Not Found in the List!";
     }
 
+    cout << endl;
+    cout << endl;
+    cout << "Searching for 10 : ";
+    if (search(head, 10))
+    {
+        cout << "Found in the List!";
+    }
+    else
+    {
+        cout << "Not Found in the List!";
+    }
+    cout << endl;
+    cout << endl;
 }

@@ -68,6 +68,12 @@ void deletion(node *&head, int val)
     delete toDelete;
 }
 
+void deleteHead(node *&head){
+    node* toDelete = head;
+    head = head->next;
+    delete toDelete;
+}
+
 void display(node *head)
 {
     node *temp = head;
@@ -128,6 +134,16 @@ int main()
 
     cout << "Delete 5 : ";
     deletion(head, 5);
+    cout << endl;
+    cout << endl;
+
+    display(head);
+
+    cout << endl;
+    cout << endl;
+
+    cout << "Delete First Node : ";
+    deleteHead(head);
     cout << endl;
     cout << endl;
 

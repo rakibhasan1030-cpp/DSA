@@ -3,7 +3,8 @@ using namespace std;
 int main()
 {
     int a = 100;
-    cout << "Value fo 'a' : "  << a << endl;     
+    cout << "Value fo 'a' : "  << a << endl;  
+       
     int *p = &a;
     cout << "Address of 'a' : " << p << endl;
 
@@ -17,7 +18,7 @@ int main()
 
     **q = 200;
     cout << "After update **q, new a's value is : "  << a << endl;   
-    
-                                                                 
+
+
     return 0;
 }

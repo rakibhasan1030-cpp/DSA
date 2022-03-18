@@ -16,6 +16,8 @@ int main()
                                                                    that means it'll give me the value of a */
 
     **q = 200;
-    cout << "After update **q, new a's value is : "  << a << endl;                                                                
+    cout << "After update **q, new a's value is : "  << a << endl;   
+    
+                                                                 
     return 0;
 }

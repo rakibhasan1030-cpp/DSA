@@ -6,7 +6,6 @@ void swap(int *a, int *b){
     *a = *b;
     *b = temp;
 }
-
 int main(){
     int a = 10, b = 20;
     cout << "Before SWAP, A : " << a << "   |   " << "B : "<< b << endl;

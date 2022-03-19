@@ -101,15 +101,19 @@ node *reverseListIterative(node *&head) /* iterative way to reverse */
     return prev;
 }
 
-node *reverseListRecursive(node *&head) { /* recursive way to reverse */
+node *reverseListRecursive(node *&head)
+{ /* recursive way to reverse */
 
-    if(head == NULL || head->next == NULL){
+    if (head == NULL || head->next == NULL)
+    {
         return head;
     }
-    node* newHead = reverseListRecursive(head->next);
+    node *newHead = reverseListRecursive(head->next);
     head->next->next = head;
     head->next = NULL;
-    
+
+    cout << "head >----->> " << newHead << endl;
+
     return newHead;
 }
 
@@ -124,7 +128,7 @@ void display(node *head)
     cout << "NULL";
 }
 
-int main() 
+int main()
 {
     node *head = NULL;
     insertAtTail(head, 1);
@@ -191,7 +195,7 @@ int main()
     cout << endl;
     cout << endl;
 
-    node* newhead = reverseListRecursive(head);
+    node *newhead = reverseListRecursive(head);
     cout << "Reversed List : ";
     display(newhead);
     cout << endl;

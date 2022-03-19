@@ -104,6 +104,8 @@ node *reverseListIterative(node *&head) /* iterative way to reverse */
 node *reverseListRecursive(node *&head)
 { /* recursive way to reverse */
 
+    cout << "head >----->> " << head->next->data << endl;
+
     if (head == NULL || head->next == NULL)
     {
         return head;
@@ -111,8 +113,6 @@ node *reverseListRecursive(node *&head)
     node *newHead = reverseListRecursive(head->next);
     head->next->next = head;
     head->next = NULL;
-
-    cout << "head >----->> " << newHead << endl;
 
     return newHead;
 }

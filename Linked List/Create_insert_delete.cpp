@@ -6,7 +6,6 @@ class node
 public:
     int data;
     node *next;
-
     node(int val)
     {
         data = val;
@@ -125,7 +124,7 @@ void display(node *head)
     cout << "NULL";
 }
 
-int main()
+int main() 
 {
     node *head = NULL;
     insertAtTail(head, 1);

@@ -108,7 +108,7 @@ node *reverseListRecursive(node *&head)
     {
         return head;
     }
-    node *newHead = reverseListRecursive(head->next);
+    node *newHead = reverseListRecursive(head->next); 
     head->next->next = head;
     head->next = NULL;
 

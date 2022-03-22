@@ -14,7 +14,6 @@ struct node
 
 void insertAtTail(node *&head, int val)
 {
-
     node *n = new node(val);
 
     if (head == NULL)
@@ -28,6 +27,11 @@ void insertAtTail(node *&head, int val)
         temp = temp->next;
     }
     temp->next = n;
+}
+
+node* oddEven(node *head){
+    
+
 }
 
 void display(node *&head)
@@ -53,5 +57,8 @@ int main()
     insertAtTail(head, 5);
 
     display(head);
+
+
+
     return 0;
 }

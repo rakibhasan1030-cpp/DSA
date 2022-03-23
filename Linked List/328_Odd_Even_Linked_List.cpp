@@ -57,6 +57,26 @@ node *oddEvenList(node *head)
     return head;
 }
 
+node *oddEvenList_2(node *head)
+{
+    if (head == NULL || head->next == NULL || head->next->next == NULL) return head; /* Boundary Cases*/
+
+    auto *odd = head;
+    auto *even = head->next;
+    node *evenStart = head->next;
+
+    while (even->next != NULL && odd->next != NULL)
+    {
+        odd->next = even->next;
+        odd = odd->next;
+        even->next = odd->next;
+        if (odd->next != NULL)
+            even = even->next;
+    }
+    odd->next = evenStart;
+    return head;
+}
+
 void display(node *&head)
 {
     if (head == NULL)
@@ -79,17 +99,17 @@ int main()
     insertAtTail(head, 4);
     insertAtTail(head, 5);
 
-    cout<<endl;
-    cout<<endl;
-    
+    cout << endl;
+    cout << endl;
+
     display(head);
-    cout<<endl;
-    cout<<endl;
+    cout << endl;
+    cout << endl;
 
     oddEvenList(head);
 
     display(head);
-    cout<<endl;
-    cout<<endl;
+    cout << endl;
+    cout << endl;
     return 0;
 }

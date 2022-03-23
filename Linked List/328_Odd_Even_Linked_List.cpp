@@ -29,9 +29,32 @@ void insertAtTail(node *&head, int val)
     temp->next = n;
 }
 
-node* oddEven(node *head){
-    
+node *oddEvenList(node *head)
+{
 
+    if (head == NULL || head->next == NULL || head->next->next == NULL)
+        return head; /* Boundary Cases*/
+
+    auto *end = head;
+    int count = 0;
+    while (end->next)
+    {
+        end = end->next;
+        count++;
+    }
+
+    count = count & 1 ? (count / 2) + 1 : count / 2;
+    auto *temp = head;
+    while (count--)
+    {
+        end->next = temp->next;
+        temp->next = temp->next->next;
+        end->next->next = NULL;
+
+        temp = temp->next;
+        end = end->next;
+    }
+    return head;
 }
 
 void display(node *&head)
@@ -56,9 +79,17 @@ int main()
     insertAtTail(head, 4);
     insertAtTail(head, 5);
 
+    cout<<endl;
+    cout<<endl;
+    
     display(head);
+    cout<<endl;
+    cout<<endl;
 
+    oddEvenList(head);
 
-
+    display(head);
+    cout<<endl;
+    cout<<endl;
     return 0;
 }

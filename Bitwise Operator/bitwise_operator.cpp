@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 /*  # The & (bitwise AND) in C or C++ takes two numbers as operands and does AND on every bit of two numbers.
       The result of AND is 1 only if both bits are 1.
 
@@ -17,6 +18,7 @@ using namespace std;
       the second operand decides the number of places to shift.
 
     # The ~ (bitwise NOT) in C or C++ takes one number and inverts all bits of it */
+
 
 int main()
 {

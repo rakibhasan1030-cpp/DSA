@@ -12,7 +12,6 @@ int main(){
         n = n / 2;
         i++;
     }
-
     // printing binary array in reverse order
     for (int j = i - 1; j >= 0; j--)
         cout << b[j];

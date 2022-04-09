@@ -21,14 +21,12 @@ void bubbleSort(int arr[], int n){
         c++;
     }
 
-
     cout<<endl;
     cout<<"Your sorted array is : ";
     for (size_t i = 0; i < n; i++)
     {
         cout<< arr[i] << "   ";
     }
-    
 }
 
 int main(){

@@ -25,7 +25,6 @@ void selectionSort(int arr[], int n){
     {
         cout<< arr[i] << "   ";
     }
-    
 }
 
 int main(){

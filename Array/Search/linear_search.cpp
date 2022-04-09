@@ -1,10 +1,13 @@
+
+/* Time Complexity : O(n) */
+
 #include<bits/stdc++.h>
 using namespace std;
 
 int linearSearch(int arr[], int size, int key){
     for (size_t i = 0; i < size; i++)
     {
-        if(key == arr[i]) return i;
+        if(key == arr[i]) return i; /* return position of the key*/
     }
     return -1;
 }

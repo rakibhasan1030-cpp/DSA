@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Find the minimum element in a unsorted array and swap it with the element at begining */
+/* Find the minimum element in a unsorted array 
+   and swap it with the element at begining */
 void selectionSort(int arr[], int n){
     for (size_t i = 0; i < n-1; i++)
     {
@@ -14,7 +15,7 @@ void selectionSort(int arr[], int n){
             }
         }
     }
-    
+
     cout<<endl;
     cout<<"Your sorted array is : ";
     for (size_t i = 0; i < n; i++)

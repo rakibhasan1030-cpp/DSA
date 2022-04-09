@@ -1,12 +1,21 @@
 
-/* Time Complexity : O(n) */
+/* Time Complexity : O(logn) */
 
 #include<bits/stdc++.h>
 using namespace std;
 
 int binerySearch(int arr[], int size, int key){
     int s = 0, e = size;
-
+    while(s <= e){
+        int mid = (s + e) / 2;
+        if(arr[mid] == key) {
+            return mid;
+        }else if (arr[mid] > key){
+            e = mid - 1;
+        }else{
+            s = mid + 1;
+        }
+    }
     return -1;
 }
 

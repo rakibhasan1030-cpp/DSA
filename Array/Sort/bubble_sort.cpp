@@ -4,8 +4,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/* Repeatedly swap two adjacent elements
-   if they are in worng order */
+/* Repeatedly swap two adjacent elements 
+   if they are in worng order 
+   (Left element > right element 
+   then it'll be in wrong order) */
 void bubbleSort(int arr[], int n){
 
     

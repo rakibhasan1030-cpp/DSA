@@ -6,7 +6,6 @@ int linearSearch(int arr[], int size, int key){
     {
         if(key == arr[i]) return i;
     }
-    
     return -1;
 }
 

@@ -7,7 +7,7 @@ using namespace std;
 int binerySearch(int arr[], int size, int key){
     int s = 0, e = size;
     while(s <= e){
-        int mid = (s + e) / 2;
+        int mid = s + (e - s) / 2; /* to avoid integer overflow condition */ 
         if(arr[mid] == key) {
             return mid;
         }else if (arr[mid] > key){
@@ -25,7 +25,7 @@ int main(){
     cin>>n;
     int arr[n];
     cout<<endl;
-    cout<<"Enter value : " << endl;
+    cout<<"Enter value : (array must be sorted!)" << endl;
     for (size_t i = 0; i < n; i++)
     {
         cin>>arr[i];

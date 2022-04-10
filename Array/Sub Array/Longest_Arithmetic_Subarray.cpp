@@ -2,6 +2,26 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+
+void longestArithmaticSubArray(int arr[], int n){
+    int ans = 2;
+    int prevDiff = arr[1] - arr[0];
+    int curr = 2;
+    int j = 2;
+    while (j < n)
+    {
+        if (prevDiff == arr[j] - arr[j-1]){
+            curr++;
+        }else{
+            prevDiff = arr[j] - arr[j-1];
+            curr = 2;
+        }
+        ans = max(ans, curr);
+        j++;
+    }
+    cout << ans << endl;
+}
+
 int main(){
     int n;
     cout<<"Enter array size : ";
@@ -20,5 +40,5 @@ int main(){
         cout<< arr[i] << "   ";
     }
     cout<<endl;
-    cout<<endl;
+    longestArithmaticSubArray(arr, n);
 }

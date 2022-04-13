@@ -25,14 +25,12 @@ int main(){
     arr[n] = -1;
     cout<<endl;
     cout<<"Enter value : " << endl;
-    for (size_t i = 0; i < n; i++)
-    {
+    for (size_t i = 0; i < n; i++){
         cin>>arr[i];
     }
     
     cout<<"Your array is : ";
-    for (size_t i = 0; i < n; i++)
-    {
+    for (size_t i = 0; i < n; i++){
         cout<< arr[i] << "   ";
     }
     cout<<endl;

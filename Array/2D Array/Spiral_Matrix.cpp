@@ -30,19 +30,18 @@ int main(){
     }
 
     /* SPIRAL PRINT */
-
-
+    
     cout << endl;
     cout << "Your SPIRAL matrix is : ";
 
-    int top = 0, bottom = N-1, left = 0, right = M-1; /* this four variable are marking the boundary of our spiral movement */
+    int i, top = 0, bottom = N-1, left = 0, right = M-1; /* this four variable are marking the boundary of our spiral movement */
     int direction = 0; /* Here, direction can be 0 (left to right), 1 (top to bottom), 2 (right to left) or 3 (bottom to top) */
 
     while(top <= bottom && left <= right){
 
         /* first condition : left to right */
         if (direction == 0){
-            for(size_t i = left; i <= right; i++){
+            for(i = left; i <= right; i++){
                 cout << arr[top][i] << " ";
             }
             top++; /* shift the top, one position down by inreasing its value */
@@ -50,7 +49,7 @@ int main(){
 
         /* second condition : top to bottom */
         else if(direction == 1){
-            for (size_t i = top; i <= bottom; i++){
+            for (i = top; i <= bottom; i++){
                 cout << arr[i][right] << " ";
             }
             right--; /* shift the right, one position left by decreasing its value */
@@ -58,7 +57,7 @@ int main(){
 
         /* third condition : right to left */
         else if (direction == 2){
-            for (size_t i = right; i >= left; i--){
+            for (i = right; i >= left; i--){
                 cout << arr[bottom][i] << " ";
             }
             bottom--; /* shift the bottom, one position up by decreasing its value */
@@ -66,12 +65,12 @@ int main(){
 
         /* forth condition : bottom to top */
         else if (direction == 3){
-            for (size_t i = bottom; i >= top; i--){
+            for (i = bottom; i >= top; i--){
                 cout << arr[i][left] << " ";
             }
             left++; /* shift the left, one position right by inreasing its value */
         }
-        
+
         direction = (direction + 1) % 4;
     }
     return 0;

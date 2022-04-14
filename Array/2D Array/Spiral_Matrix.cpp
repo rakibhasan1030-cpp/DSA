@@ -36,10 +36,17 @@ int main(){
     while(top <= bottom && left <= right){
         /* first condition : left o right */
         if (direction == 0){
-            for(int i = left; i <= right; i++){
+            for(size_t i = left; i <= right; i++){
                 cout << arr[top][i] << " ";
             }
-            top += 1;
+            top += 1; /* shift the top one position down by inreasing its value */
+        }
+        /* second condition : top o bottom */
+        else if(direction == 1){
+            for (size_t i = top; i <= bottom; i++){
+                cout << arr[i][right] << " ";
+            }
+            right -= 1; /* shift the right one left by decreasing its value */
         }
     }
 

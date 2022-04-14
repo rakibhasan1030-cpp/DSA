@@ -8,16 +8,11 @@ void linearSearch(int arr[M][N], int key){
     {
         for (size_t j = 0; j < N; j++)
         {
-            if(arr[M][N]  == key){
-                flag = true;
-            } 
+            if(arr[i][j]  == key) flag = true;
         }
     }
-    if(flag) {
-        cout << "Found!";
-    }else{
-        cout << "Not Found!";
-    } 
+    if(flag) cout << "Found!";
+    else cout << "Not Found!";
 }
 
 int main(){

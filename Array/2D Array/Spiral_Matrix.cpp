@@ -37,8 +37,9 @@ int main(){
 
     int top = 0, bottom = N-1, left = 0, right = M-1; /* this four variable are marking the boundary of our spiral movement */
     int direction = 0; /* Here, direction can be 0 (left to right), 1 (top to bottom), 2 (right to left) or 3 (bottom to top) */
-    
+
     while(top <= bottom && left <= right){
+
         /* first condition : left to right */
         if (direction == 0){
             for(size_t i = left; i <= right; i++){
@@ -70,7 +71,7 @@ int main(){
             }
             left++; /* shift the left, one position right by inreasing its value */
         }
-
+        
         direction = (direction + 1) % 4;
     }
     return 0;

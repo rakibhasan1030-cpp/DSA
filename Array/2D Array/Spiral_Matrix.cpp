@@ -4,8 +4,6 @@ int main(){
     int N, M;
     cout<< "Enter ROW for the MATRIX : ";
     cin>>N;
-    
-    cout << endl;
     cout<< "Enter COLUMN for the MATRIX : ";
     cin>>M;
 
@@ -30,5 +28,7 @@ int main(){
         }
         cout << endl;
     }
+
+    
 
 }

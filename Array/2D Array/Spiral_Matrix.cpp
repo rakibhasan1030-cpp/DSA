@@ -29,6 +29,9 @@ int main(){
         cout << endl;
     }
 
+    /* SPIRAL PRINT */
+
+    int top = 0, down = N-1, left = 0, right = M-1;
     
 
 }

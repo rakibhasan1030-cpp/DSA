@@ -37,6 +37,7 @@ int main(){
 
     int top = 0, bottom = N-1, left = 0, right = M-1; /* this four variable are marking the boundary of our spiral movement */
     int direction = 0; /* Here, direction can be 0 (left to right), 1 (top to bottom), 2 (right to left) or 3 (bottom to top) */
+    
     while(top <= bottom && left <= right){
         /* first condition : left to right */
         if (direction == 0){
@@ -59,7 +60,7 @@ int main(){
             for (size_t i = right; i >= left; i--){
                 cout << arr[bottom][i] << " ";
             }
-            bottom -= 1; /* shift the bottom, one position up by decreasing its value */
+            bottom--; /* shift the bottom, one position up by decreasing its value */
         }
 
         /* forth condition : bottom to top */
@@ -67,13 +68,12 @@ int main(){
             for (size_t i = bottom; i >= top; i--){
                 cout << arr[i][left] << " ";
             }
-            left += 1; /* shift the left, one position right by inreasing its value */
+            left++; /* shift the left, one position right by inreasing its value */
         }
 
         direction = (direction + 1) % 4;
-
     }
-
+    return 0;
 }
 
 

@@ -2,11 +2,11 @@
 using namespace std;
 const int M=3, N=3;
 
-void linearSearch(int arr[M][N], int key){
+void linearSearch(int arr[N][M], int key){
     bool flag = false;
-    for (size_t i = 0; i < M; i++)
+    for (size_t i = 0; i < N; i++)
     {
-        for (size_t j = 0; j < N; j++)
+        for (size_t j = 0; j < M; j++)
         {
             if(arr[i][j]  == key) flag = true;
         }
@@ -17,12 +17,12 @@ void linearSearch(int arr[M][N], int key){
 
 int main(){
 
-    int arr[M][N];
+    int arr[N][M];
     cout<< "----- Enter value for 3X3 MATRIX -----" <<endl;
     cout << endl;
-    for (size_t i = 0; i < M; i++)
+    for (size_t i = 0; i < N; i++)
     {
-        for (size_t j = 0; j < N; j++)
+        for (size_t j = 0; j < M; j++)
         {
             cout<< "Enter [" << i << j << "]-th element : ";
             cin>>arr[i][j];
@@ -32,9 +32,9 @@ int main(){
     cout << endl;
     cout << "Your matrix is : " << endl;
 
-    for (size_t i = 0; i < M; i++)
+    for (size_t i = 0; i < N; i++)
     {
-        for (size_t j = 0; j < N; j++)
+        for (size_t j = 0; j < M; j++)
         {
             cout<<arr[i][j] << " ";
         }

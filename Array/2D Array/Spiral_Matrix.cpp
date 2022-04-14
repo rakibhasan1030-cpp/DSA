@@ -61,10 +61,12 @@ int main(){
         /* forth condition : bottom to top */
         else if (direction == 3){
             for (size_t i = bottom; i <= top; i--){
-                /* code */
+                cout << arr[i][left];
             }
-            
+            left += 1; /* shift the left, one position right by inreasing its value */
         }
+
+        direction = (direction + 1) % 4;
 
     }
 

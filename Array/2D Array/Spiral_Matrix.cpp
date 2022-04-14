@@ -52,8 +52,7 @@ int main(){
 
         /* third condition : right to left */
         else if (direction == 2){
-            for (size_t i = right; i <= left; i--)
-            {
+            for (size_t i = right; i <= left; i--){
                 cout << arr[bottom][i] << " ";
             }
             bottom -= 1; /* shift the bottom, one position up by decreasing its value */
@@ -61,8 +60,7 @@ int main(){
 
         /* forth condition : bottom to top */
         else if (direction == 3){
-            for (size_t i = bottom; i <= top; i--)
-            {
+            for (size_t i = bottom; i <= top; i--){
                 /* code */
             }
             

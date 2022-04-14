@@ -32,6 +32,10 @@ int main(){
     /* SPIRAL PRINT */
 
     int top = 0, down = N-1, left = 0, right = M-1; /* this four variable are marking the boundary of our spiral movement */
-    int direction = 0; /*  */ 
+    int direction = 0; /* Here, direction can be 0, 1, 2 or 3
+                          0 means left to right
+                          1 means top to down 
+                          2 means right to left 
+                          3 means down to top   */ 
 
 }

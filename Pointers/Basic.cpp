@@ -16,4 +16,5 @@ int main(){
 
     cout<< "Value of 'a' after change : " << a << endl;
 
+    return 0;
 }

@@ -17,5 +17,11 @@ int main()
     -> b = a */
 
     cout << "After swap : " << "A = " << a << "   |   B = " << b << endl; 
+
+    cout << "5 ^ 0 = " << (5^0) << endl;
+    cout << "10 ^ 0 = " << (10^0) << endl;
+    cout << "2 ^ 0 = " << (2^0) << endl;
+    cout << "700 ^ 0 = " << (700^0) << endl;
+
     return 0;
 }

@@ -8,8 +8,8 @@ int main()
     b = (a^b);
     a = (a^b);
 
-    //a = b^a^(b = a); 
-    /* Which is, when you xor (^) two same numbers the result is 0, it's like they cancels each other. Now using this
+    //a = b^a^(b = a); // in one line
+    /* EXPLANATION : Which is, when you xor (^) two same numbers the result is 0, it's like they cancels each other. Now using this
     a = b ^ a ^ (a = b);
     -> a = b ^ a ^ a [since now a = b]
     [So now a^a = 0.]

@@ -5,7 +5,16 @@ void findTheBit(string b, int i){
     
 }
 
-string decimalToBinery(int n){
+
+void find(int n, int i){
+    if((n & (1 << i))){
+        cout << "Your bit in " << i << " position is : 1" << endl;
+    } else{
+        cout << "Your bit in " << i << " position is : 0" << endl;
+    }
+}
+
+string decimalToBinary(int n){
     string nStr;
     while(n){
         if (n & 1){
@@ -16,6 +25,7 @@ string decimalToBinery(int n){
         n >>= 1;
     }
     reverse(nStr.begin(), nStr.end());
+    cout <<"Binery number = " << nStr << "   |   " << "Size = " << nStr.size() << endl;
     return nStr;
 }
 
@@ -24,9 +34,16 @@ int main(){
     cout << "Enter your value(in decimal) : ";
     cin>>n;
     string nStr;
-    nStr= decimalToBinery(n);
+    nStr= decimalToBinary(n);
 
     cout << "Enter your bit position : ";
     cin>>i;
-    findTheBit(nStr, i);
+    // if((nStr.size() - 1) >= i){
+    //     findTheBit(nStr, i);
+    // }else{
+    //     cout << "Your bit position is out of bound!";
+    //     exit;
+    // }
+
+    find(n, i);
 }

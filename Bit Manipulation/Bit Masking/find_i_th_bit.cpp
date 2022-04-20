@@ -10,9 +10,14 @@ void findTheBit(int n, int i){
 }
 int main(){
     int n, i;
+
     cout << "Enter your value(in decimal) : ";
     cin>>n;
+
     cout << "Enter your bit position : ";
     cin>>i;
+
     findTheBit(n, i);
+
+    return 0;
 }

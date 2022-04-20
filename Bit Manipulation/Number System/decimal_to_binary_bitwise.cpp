@@ -16,7 +16,7 @@ string decimalToBinary(int n){
 
 int main(){
     int n;
-    cout << "Enter your value(in decimal) : ";
+    cout << "Enter your value : ";
     cin>>n;
-    cout << "Binary of " << n << "is : " << decimalToBinary(n) << endl;
+    cout << "Binary of " << n << " is : " << decimalToBinary(n) << endl;
 }

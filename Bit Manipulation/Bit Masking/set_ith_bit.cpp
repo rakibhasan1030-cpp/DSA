@@ -18,7 +18,7 @@ int main(){
 
     /* INPUT - n = 5 (101), i = 1
        OUTPUT - ans = 7 (111), 1-th position bit 0 became 1, which value is 7 */
-    cout << "After set bit 1 to " << i<<"-the position, the new value is = " << setTheBit(n, i) << endl;
+    cout << "After set bit 1, at " << i <<"-the position, the new value is = " << setTheBit(n, i) << endl;
 
     return 0;
 }

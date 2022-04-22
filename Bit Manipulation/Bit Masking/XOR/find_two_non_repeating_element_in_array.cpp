@@ -21,7 +21,7 @@ void get2NonRepeatingNumbers(int arr[], int n){
     for (int i = 0; i < n; i++)
     {
         /*xorr of first set */
-        if((arr[i] & setBitPos) == 1){
+        if(arr[i] & setBitPos){
             x = x ^ arr[i];
         }else{ /*xorr of second set */
             y = y ^ arr[i];
@@ -32,7 +32,7 @@ void get2NonRepeatingNumbers(int arr[], int n){
 
 int main(){
 
-    int arr[] = { 1, 2, 3, 4, 5, 1, 2, 3, 4, 8 };
+    int arr[] = { 1, 2, 3, 4, 6, 1, 2, 3, 4, 8 };
     int n = (sizeof(arr) / sizeof(arr[0]));
     get2NonRepeatingNumbers(arr, n);
     return 0;

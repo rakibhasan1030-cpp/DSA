@@ -13,7 +13,7 @@ void get2NonRepeatingNumbers(int arr[], int n){
     }
     
     /* Get the rightmost set bit in setBitPos, FORMULLA : n ^ ~(n-1)*/
-    setBitPos = xorr ^ ~(xorr - 1);
+    setBitPos = xorr & ~(xorr - 1);
 
     /* Now divide elements in two sets by
     comparing rightmost set bit of Xor with bit
@@ -22,9 +22,9 @@ void get2NonRepeatingNumbers(int arr[], int n){
     {
         /*xorr of first set */
         if((arr[i] & setBitPos) == 1){
-            x = xorr ^ arr[i];
+            x = x ^ arr[i];
         }else{ /*xorr of second set */
-            y = xorr ^ arr[i];
+            y = y ^ arr[i];
         }
     }
     cout << "The non-repeating elements are " << x << " and " << y;

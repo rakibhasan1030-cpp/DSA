@@ -20,9 +20,10 @@ void get2NonRepeatingNumbers(int arr[], int n){
     at same position in each element. */
     for (int i = 0; i < n; i++)
     {
+        /*xorr of first set */
         if((arr[i] & setBitPos) == 1){
             x = xorr ^ arr[i];
-        }else{
+        }else{ /*xorr of second set */
             y = xorr ^ arr[i];
         }
     }

@@ -11,9 +11,11 @@ void get2NonRepeatingNumbers(int arr[], int n){
     {
         xorr ^= arr[i];
     }
-    
-    /* Get the rightmost set bit in setBitPos, FORMULLA : n ^ ~(n-1)*/
-    setBitPos = xorr & ~(xorr - 1);
+
+    /* Now, xorr variable contains, XOR of two non-repeating elements */
+
+    /* Get the rightmost set bit in any number, FORMULLA : n ^ ~(n-1)*/
+    setBitPos = xorr & ~(xorr - 1); /* in this position (setBitPos) the two non-repeating elements bits will be different */
 
     /* Now divide elements in two sets by
     comparing rightmost set bit of Xor with bit

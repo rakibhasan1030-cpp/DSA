@@ -5,10 +5,10 @@ int main()
     int a = 100;
     cout << "Value fo 'a' : "  << a << endl;  
        
-    int *p = &a;
+    int* p = &a;
     cout << "Address of 'a' : " << p << endl;
 
-    int **q = &p;                                               /* here, q is pointing to p, so q contain the address of p, and p is contain a's address */
+    int **q = &p; /* here, q is pointing to p, so q contain the address of p, and p is contain a's address */
     cout << "One time de-reference of q (*q) : " << *q << endl; /* here, we de-reference of q (*q) for one time only,
                                                                    that means it'll give me the value of p which is address
                                                                    of a */
